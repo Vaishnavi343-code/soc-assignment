@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Vaishnavi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0d1117;
+      --card-color: #161b22;
+      --accent: violet;
+      --text-color: #c9d1d9;
+      --header-color: violet;
+      --border-color: #30363d;
+      --glow: 0 0 15px rgba(160, 82, 255, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.8;
+      padding: 20px;
+    }
+
+    header {
+      background-color: var(--card-color);
+      padding: 30px;
+      text-align: center;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      margin-bottom: 50px;
+      box-shadow: var(--glow);
+      transition: 0.3s;
+    }
+
+    header:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 25px rgba(160, 82, 255, 0.4);
+    }
+
+    header h1 {
+      font-size: 2.7rem;
+      color: var(--accent);
+      text-shadow: 0 0 6px rgba(160, 82, 255, 0.3);
+    }
+
+    .hii {
+      color: var(--header-color);
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
+    main {
+      max-width: 920px;
+      margin: auto;
+    }
+
+    section {
+      background-color: var(--card-color);
+      border: 1px solid var(--border-color);
+      border-left: 6px solid var(--accent);
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: var(--glow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 30px rgba(160, 82, 255, 0.4);
+    }
+
+    section h3 {
+      color: var(--header-color);
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 5px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li::marker {
+      color: var(--accent);
+    }
+
+    strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    footer::before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      margin: 0 auto 15px;
+      background: var(--accent);
+      border-radius: 3px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section h3 {
+        font-size: 1.3rem;
+      }
+
+      p, li {
+        font-size: 1rem;
+      }
+
+      .hii {
+        font-size: 1.1rem;
+      }
+
+      
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>👩‍🎓 About Vaishnavi</h1>
+    <img src="/college.jpg" height="45%" width="45%">
+  </header>
+
+  <main>
+    <section>
+      <p><span class="hii">Hi, I'm Vaishnavi!</span><br><br>
+        I am an <strong>ambitious and hard-working student</strong> dedicated to giving my best every day.
+        With a proven record of embracing challenges, I am driven by a desire to create a positive impact.
+        I enjoy solving problems and growing through new experiences, always curious to learn and evolve.
+      </p>
+    </section>
+
+    <section>
+      <h3>📘 Education</h3>
+      <p>
+        <strong>Currently:</strong> 1<sup>st</sup> year undergraduate student at <strong>IIT Bombay</strong><br>
+        <strong>Program:</strong> B.Tech in Mechanical Engineering
+      </p>
+    </section>
+
+    <section>
+      <h3>🏫 Schooling</h3>
+      <ul>
+        <li><strong>Primary:</strong> Adarsh Public School, Veeta</li>
+        <li><strong>Secondary:</strong> Eklavya Public School, Panhala</li>
+        <li><strong>Higher Secondary:</strong> Narake's Panhala Public School, Panhala</li>
+        <li><strong>11th–12th:</strong> New Model English College, Kolhapur</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>🏅 Achievements</h3>
+      <ul>
+        <li>Scored <strong>98%</strong> in 10th Board</li>
+        <li>Scored <strong>94%</strong> in 12th Board</li>
+        <li>Cracked <strong>JEE Mains</strong> and <strong>JEE Advanced</strong></li>
+        <li>Secured admission to <strong>IIT Bombay</strong> 🎓</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>🎯 Hobbies</h3>
+      <ul>
+        <li>Dancing 💃</li>
+        <li>Listening to music 🎵</li>
+        <li>Watching movies 🎬</li>
+        <li>Drawing 🎨</li>
+        <li>Travelling ✈</li>
+        <li>Learning new skills 🧠</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    🌟 Thanks for visiting my about page!
+  </footer>
+
+</body>
+</html>

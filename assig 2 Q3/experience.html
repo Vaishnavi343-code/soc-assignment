@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Experience</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --text: #c9d1d9;
+      --accent: #a052ff;
+      --border: #30363d;
+      --highlight: #58a6ff;
+      --glow: 0 0 12px rgba(160, 82, 255, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+    }
+
+    header {
+      background-color: var(--card);
+      text-align: center;
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: var(--glow);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 15px;
+      text-shadow: 0 0 6px rgba(160, 82, 255, 0.3);
+    }
+
+    header img {
+      max-width: 200px;
+      margin-top: 10px;
+      border-radius: 10px;
+      box-shadow: var(--glow);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .experience-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      width: 100%;
+      max-width: 500px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--glow);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(187, 134, 252, 0.2);
+    }
+
+    .card p {
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    em {
+      color: var(--highlight);
+    }
+
+    .section-img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      margin-top: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(160, 82, 255, 0.3);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      color: #8b949e;
+      font-size: 1rem;
+    }
+
+    footer::before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      margin: 0 auto 15px;
+      background: var(--accent);
+      border-radius: 3px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🚀 My Experience</h1>
+    
+  </header>
+
+  <main>
+    <div class="experience-container">
+
+      <div class="card">
+        <p>🏅 Participated in school-level competitions; won a <strong>Gold Medal</strong> at the district-level <strong>Drawing Competition</strong>.</p>
+      </div>
+
+      <div class="card">
+        <p>🛩️ Built a fully functional <strong>Drone Controller</strong> as part of the <strong>MS101 project</strong>.</p>
+      </div>
+
+      <div class="card">
+        <p>🤖 Competed in <strong>XLR8</strong> — IIT Bombay’s high-energy bot-making contest.</p>
+      </div>
+
+      <div class="card">
+        <p>🏃‍♀️ Selected for the prestigious <strong>Kho-Kho Spardha Camp</strong>, representing athletic excellence.</p>
+      </div>
+
+      <div class="card">
+        <p>🎉 Earned a <strong>Gold Medal</strong> at <strong>Frieshiesta</strong>, an inter-college cultural fest.</p>
+      </div>
+
+      <div class="card">
+        <p>🥇 Secured <strong>Gold Medal</strong> in the <strong>IKKL (Kho-Kho League)</strong>.</p>
+      </div>
+
+      <div class="card">
+        <p>🎯 Served as an <strong>Organizer</strong> at <strong>E-Summit</strong>, leading events like <em>Treasure Hunt</em> and <em>Fish Tank</em>.</p>
+      </div>
+
+    
+  </main>
+
+  <footer>
+    ✨ Each experience shaped my journey — more to come!
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --text: #c9d1d9;
+      --accent: #a052ff;
+      --border: #30363d;
+      --link-hover: #8a63d2;
+      --highlight: #58a6ff;
+      --glow: 0 0 12px rgba(160, 82, 255, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: var(--card);
+      padding: 25px 40px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-align: center;
+      margin-bottom: 40px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: var(--glow);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      letter-spacing: 1.2px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 6px rgba(160, 82, 255, 0.3);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .contact-card {
+      background-color: var(--card);
+      padding: 20px 25px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--glow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 1.1rem;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 18px rgba(187, 134, 252, 0.2);
+    }
+
+    .contact-card strong {
+      color: #ffffff;
+      min-width: 90px;
+    }
+
+    .contact-card a {
+      color: var(--highlight);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-card a:hover {
+      color: var(--link-hover);
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #888;
+      font-size: 1rem;
+      text-align: center;
+      max-width: 700px;
+      width: 100%;
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .contact-card {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1rem;
+      }
+
+      .contact-card strong {
+        min-width: auto;
+        margin-bottom: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📞 Contact Details</h1>
+  </header>
+
+  <main>
+    <div class="contact-card">📱 <strong>Mobile:</strong> 7066639401</div>
+    <div class="contact-card">💬 <strong>WhatsApp:</strong> 7066639401</div>
+    <div class="contact-card">✉️ <strong>Email:</strong> <a href="mailto:vaishnavishivai80@gmail.com">vaishnavishivai80@gmail.com</a></div>
+    <div class="contact-card">📸 <strong>Instagram:</strong> <a href="https://www.instagram.com/vaishnavi_shivai?igsh=cnB2ZmxxM3ZueTlw" target="_blank">Vaishnavishivai</a></div>
+    <div class="contact-card">🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vaishnavi-shivai" target="_blank">Vaishnavi Shivai</a></div>
+  </main>
+
+  <footer>
+    🌟 Feel free to reach out for collaboration, questions, or just to say hello!
+  </footer>
+
+</body>
+</html>

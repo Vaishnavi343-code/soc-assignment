@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 69, 0.95);
+  padding: 1rem 3rem;
+  box-shadow: 0 4px 20px rgba(138, 43, 226, 0.3);
+}
+
+nav .left {
+  font-size: 2rem;
+  font-weight: bold;
+  color: violet;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: violet;
+  color: #000;
+  box-shadow: 0 0 10px violet;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 3rem;
+}
+
+.hero-text {
+  max-width: 600px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text .highlight {
+  color: violet;
+  font-weight: 700;
+}
+
+.hero-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 30px violet;
+}
+
+/* Section Divider */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, violet, transparent);
+  margin: 4rem auto;
+  width: 80%;
+}
+
+/* About & Skills */
+.about, .skills {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.1);
+}
+
+.about h2, .skills h2 {
+  font-size: 2rem;
+  color: violet;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.skills li {
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #000045;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    font-size: 1.3rem;
+  }
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
+  }
+}

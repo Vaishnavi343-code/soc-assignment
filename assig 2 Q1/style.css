@@ -1,0 +1,93 @@
+body {
+  font-family:serif;
+  padding: 20px;
+  background-color: #fff;
+  color: #000;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.line {
+  border-bottom: 4px solid red;
+  width: 100%;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 24px;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+.firstblock {
+  border: 2px solid black;
+  width: 25%;
+  padding: 15px;
+  margin-top: 10px;
+  
+  background-color: #f9f9f9;
+}
+
+.blocks {
+  display: flex;
+  gap: 100px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  
+}
+
+.first {
+  border: 3px solid blue;
+  padding: 15px;
+  padding-top:2px;
+  height:5rem;
+  
+  
+  }
+
+  .second{
+    border: 3px solid blue;
+  padding: 15px;
+  width:250px;
+  padding-top:2px;
+  padding-bottom:20px;
+  margin-top:-20px ;
+  
+  }
+  
+
+.link {
+    display:flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right:20px;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+  
+}
+
+a {
+  text-decoration: underline;
+  color: blue;
+  border: 1px solid green;
+  width:35%;
+  padding: 5px;
+  transition: 0.3s;
+  align-items: center;
+}
+
+a:hover, a:focus {
+  color: dodgerblue;
+  opacity: 0.8;
+}
+
+a:visited {
+  color: purple;
+}

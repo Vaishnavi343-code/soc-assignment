@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Letter Grid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #e1e1e1, #f4f1f1);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+      
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* increased min width */
+      gap: 10px;
+      width: 100vw;
+      height:80px;
+      padding:10px;
+      
+    }
+
+    .block {
+    
+      background-color: #333;
+      color: white;
+      height: 80px; /* increased height */
+      font-size: 1.4rem; /* increased font */
+      font-weight: 500;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      padding-left: 5px;
+     
+    }
+
+    .block:hover {
+      background-color: #444;
+    }
+
+    @media (max-width: 76px) {
+      .block {
+        font-size: 1.1rem;
+        height: 70px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid">
+    <div class="block">A</div>
+    <div class="block">B</div>
+    <div class="block">C</div>
+    <div class="block">D</div>
+    <div class="block">E</div>
+    <div class="block">F</div>
+    <div class="block">G</div>
+    <div class="block">H</div>
+    <div class="block">I</div>
+    <div class="block">J</div>
+    <div class="block">K</div>
+    <div class="block">L</div>
+    <div class="block">M</div>
+  </div>
+
+</body>
+</html>

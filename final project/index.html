@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>15 Puzzle Game</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #d4a017;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(4, 80px);
+      grid-gap: 8px;
+      background: black;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .tile {
+      width: 80px;
+      height: 80px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .tile.empty {
+      background: #d4a017;
+      cursor: default;
+    }
+
+    .tile.incorrect {
+      background: #4b0082; /* dark purple */
+    }
+
+    .tile.correct {
+      background: #b883d8; /* faint purple */
+    }
+
+    .new-game {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .new-game:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>15 Puzzle Game</h1>
+  <div class="board" id="board"></div>
+  <button class="new-game" onclick="init()">New Game</button>
+
+  <script>
+    const board = document.getElementById("board");
+    let tiles = [];
+
+    function init() {
+      let numbers = [...Array(15).keys()].map(i => i + 1);
+      numbers = shuffle(numbers);
+      numbers.push(null); // Add the blank space
+      tiles = numbers;
+      draw();
+    }
+
+    function draw() {
+      board.innerHTML = "";
+      tiles.forEach((value, index) => {
+        const tile = document.createElement("div");
+        tile.className = "tile";
+
+        if (value === null) {
+          tile.classList.add("empty");
+        } else {
+          const isCorrect = (index + 1) === value;
+
+          tile.textContent = value;
+          tile.classList.add(isCorrect ? "correct" : "incorrect");
+
+          tile.onclick = () => move(index);
+        }
+
+        board.appendChild(tile);
+      });
+    }
+
+    function move(index) {
+      const emptyIndex = tiles.indexOf(null);
+      const valid = isAdjacent(index, emptyIndex);
+      if (valid) {
+        [tiles[index], tiles[emptyIndex]] = [tiles[emptyIndex], tiles[index]];
+        draw();
+      }
+    }
+
+    function isAdjacent(i1, i2) {
+      const x1 = i1 % 4, y1 = Math.floor(i1 / 4);
+      const x2 = i2 % 4, y2 = Math.floor(i2 / 4);
+      return Math.abs(x1 - x2) + Math.abs(y1 - y2) === 1;
+    }
+
+    function shuffle(array) {
+      let a = [...array];
+      for (let i = a.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    window.onload = init;
+  </script>
+</body>
+</html>

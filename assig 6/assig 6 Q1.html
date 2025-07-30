@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Hourglass Pattern</title>
+
+  <style>
+
+    body {
+
+      font-family: Arial, sans-serif;
+
+      padding: 20px;
+
+    }
+
+    input, button {
+
+      padding: 8px;
+
+      margin-right: 10px;
+
+    }
+
+    .pattern {
+
+      white-space: pre;
+
+      margin-top: 20px;
+
+      font-family: monospace;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h2>Hourglass Pattern Generator</h2>
+
+  <input type="number" id="numInput" placeholder="Enter number" min="1">
+
+  <button onclick="generateHourglass()">Generate</button>
+
+  <div class="pattern" id="patternArea"></div>
+
+
+
+  <script>
+
+    function generateHourglass() {
+
+      const num = parseInt(document.getElementById('numInput').value);
+
+      const patternArea = document.getElementById('patternArea');
+
+      if (isNaN(num) || num < 1) {
+
+        patternArea.textContent = 'Please enter a positive number.';
+
+        return;
+
+      }
+
+
+
+      let pattern = '';
+
+      // Top half
+
+      for (let i = num; i > 0; i--) {
+
+        const spaces = ' '.repeat(num - i);
+
+        const stars = '*'.repeat(2 * i - 1);
+
+        pattern += spaces + stars + '\n';
+
+      }
+
+      // Bottom half
+
+      for (let i = 2; i <= num; i++) {
+
+        const spaces = ' '.repeat(num - i);
+
+        const stars = '*'.repeat(2 * i - 1);
+
+        pattern += spaces + stars + '\n';
+
+      }
+
+
+
+      patternArea.textContent = pattern;
+
+    }
+
+  </script>
+
+</body>
+
+</html>
